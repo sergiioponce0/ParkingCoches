@@ -36,3 +36,18 @@ El modelo simula escenarios del mundo real donde recursos limitados deben ser co
 | **`MainParking.java`** | 🎮 Punto de entrada de la aplicación | Configuración, inicialización, coordinación general |
 
 ### 🔄 Diagrama de Flujo del Sistema
+
+MainParking (Inicio)
+↓
+Crea Aparcamiento_Coches
+↓
+Crea N hilos Coches
+↓
+Coche intenta ENTRAR → Semáforo.acquire()
+↓
+[SI hay plaza] → Coche APARCA → Thread.sleep(tiempoAleatorio)
+↓
+Coche SALE → Semáforo.release()
+↓
+Fin de todos los hilos
+
